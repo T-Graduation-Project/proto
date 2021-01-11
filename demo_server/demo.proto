@@ -2,15 +2,15 @@ syntax = "proto3";
 option go_package = ".;proto";
 package demo;
 
-service Say {
-  rpc Hello(HelloRequest) returns (HelloResponse) {}
+service Hello {
+  rpc Hello(HelloReq) returns (HelloRsp) {}
 }
 
-message HelloRequest {
+message HelloReq {
   string req = 1;
 }
 
-message HelloResponse {
+message HelloRsp {
   string res = 1;
 }
 

@@ -25,7 +25,7 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
-type HelloRequest struct {
+type HelloReq struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -33,8 +33,8 @@ type HelloRequest struct {
 	Req string `protobuf:"bytes,1,opt,name=req,proto3" json:"req,omitempty"`
 }
 
-func (x *HelloRequest) Reset() {
-	*x = HelloRequest{}
+func (x *HelloReq) Reset() {
+	*x = HelloReq{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_demo_server_demo_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -42,13 +42,13 @@ func (x *HelloRequest) Reset() {
 	}
 }
 
-func (x *HelloRequest) String() string {
+func (x *HelloReq) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HelloRequest) ProtoMessage() {}
+func (*HelloReq) ProtoMessage() {}
 
-func (x *HelloRequest) ProtoReflect() protoreflect.Message {
+func (x *HelloReq) ProtoReflect() protoreflect.Message {
 	mi := &file_demo_server_demo_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -60,19 +60,19 @@ func (x *HelloRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HelloRequest.ProtoReflect.Descriptor instead.
-func (*HelloRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use HelloReq.ProtoReflect.Descriptor instead.
+func (*HelloReq) Descriptor() ([]byte, []int) {
 	return file_demo_server_demo_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *HelloRequest) GetReq() string {
+func (x *HelloReq) GetReq() string {
 	if x != nil {
 		return x.Req
 	}
 	return ""
 }
 
-type HelloResponse struct {
+type HelloRsp struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -80,8 +80,8 @@ type HelloResponse struct {
 	Res string `protobuf:"bytes,1,opt,name=res,proto3" json:"res,omitempty"`
 }
 
-func (x *HelloResponse) Reset() {
-	*x = HelloResponse{}
+func (x *HelloRsp) Reset() {
+	*x = HelloRsp{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_demo_server_demo_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -89,13 +89,13 @@ func (x *HelloResponse) Reset() {
 	}
 }
 
-func (x *HelloResponse) String() string {
+func (x *HelloRsp) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*HelloResponse) ProtoMessage() {}
+func (*HelloRsp) ProtoMessage() {}
 
-func (x *HelloResponse) ProtoReflect() protoreflect.Message {
+func (x *HelloRsp) ProtoReflect() protoreflect.Message {
 	mi := &file_demo_server_demo_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -107,12 +107,12 @@ func (x *HelloResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use HelloResponse.ProtoReflect.Descriptor instead.
-func (*HelloResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use HelloRsp.ProtoReflect.Descriptor instead.
+func (*HelloRsp) Descriptor() ([]byte, []int) {
 	return file_demo_server_demo_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *HelloResponse) GetRes() string {
+func (x *HelloRsp) GetRes() string {
 	if x != nil {
 		return x.Res
 	}
@@ -123,15 +123,14 @@ var File_demo_server_demo_proto protoreflect.FileDescriptor
 
 var file_demo_server_demo_proto_rawDesc = []byte{
 	0x0a, 0x16, 0x64, 0x65, 0x6d, 0x6f, 0x5f, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2f, 0x64, 0x65,
-	0x6d, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x04, 0x64, 0x65, 0x6d, 0x6f, 0x22, 0x20,
-	0x0a, 0x0c, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x10,
-	0x0a, 0x03, 0x72, 0x65, 0x71, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x72, 0x65, 0x71,
-	0x22, 0x21, 0x0a, 0x0d, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73,
-	0x65, 0x12, 0x10, 0x0a, 0x03, 0x72, 0x65, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03,
-	0x72, 0x65, 0x73, 0x32, 0x39, 0x0a, 0x03, 0x53, 0x61, 0x79, 0x12, 0x32, 0x0a, 0x05, 0x48, 0x65,
-	0x6c, 0x6c, 0x6f, 0x12, 0x12, 0x2e, 0x64, 0x65, 0x6d, 0x6f, 0x2e, 0x48, 0x65, 0x6c, 0x6c, 0x6f,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x13, 0x2e, 0x64, 0x65, 0x6d, 0x6f, 0x2e, 0x48,
-	0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09,
+	0x6d, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x04, 0x64, 0x65, 0x6d, 0x6f, 0x22, 0x1c,
+	0x0a, 0x08, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x71, 0x12, 0x10, 0x0a, 0x03, 0x72, 0x65,
+	0x71, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x72, 0x65, 0x71, 0x22, 0x1c, 0x0a, 0x08,
+	0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x73, 0x70, 0x12, 0x10, 0x0a, 0x03, 0x72, 0x65, 0x73, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x72, 0x65, 0x73, 0x32, 0x32, 0x0a, 0x05, 0x48, 0x65,
+	0x6c, 0x6c, 0x6f, 0x12, 0x29, 0x0a, 0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x0e, 0x2e, 0x64,
+	0x65, 0x6d, 0x6f, 0x2e, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x65, 0x71, 0x1a, 0x0e, 0x2e, 0x64,
+	0x65, 0x6d, 0x6f, 0x2e, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x52, 0x73, 0x70, 0x22, 0x00, 0x42, 0x09,
 	0x5a, 0x07, 0x2e, 0x3b, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
 	0x33,
 }
@@ -150,12 +149,12 @@ func file_demo_server_demo_proto_rawDescGZIP() []byte {
 
 var file_demo_server_demo_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_demo_server_demo_proto_goTypes = []interface{}{
-	(*HelloRequest)(nil),  // 0: demo.HelloRequest
-	(*HelloResponse)(nil), // 1: demo.HelloResponse
+	(*HelloReq)(nil), // 0: demo.HelloReq
+	(*HelloRsp)(nil), // 1: demo.HelloRsp
 }
 var file_demo_server_demo_proto_depIdxs = []int32{
-	0, // 0: demo.Say.Hello:input_type -> demo.HelloRequest
-	1, // 1: demo.Say.Hello:output_type -> demo.HelloResponse
+	0, // 0: demo.Hello.Hello:input_type -> demo.HelloReq
+	1, // 1: demo.Hello.Hello:output_type -> demo.HelloRsp
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -170,7 +169,7 @@ func file_demo_server_demo_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_demo_server_demo_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HelloRequest); i {
+			switch v := v.(*HelloReq); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -182,7 +181,7 @@ func file_demo_server_demo_proto_init() {
 			}
 		}
 		file_demo_server_demo_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HelloResponse); i {
+			switch v := v.(*HelloRsp); i {
 			case 0:
 				return &v.state
 			case 1:
