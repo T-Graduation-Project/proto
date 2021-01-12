@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = ".;proto";
+option go_package = ".;demo_server";
 package demo;
 
 service Hello {
