@@ -1,6 +1,6 @@
 syntax = "proto3";
 option go_package = ".;demo_server";
-package demo;
+package demo_server;
 
 service Hello {
   rpc Hello(HelloReq) returns (HelloRsp) {}
