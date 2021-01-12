@@ -1,4 +1,4 @@
-module proto
+module github.com/T-Graduation-Project/proto
 
 go 1.15
 
