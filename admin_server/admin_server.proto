@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = ".;admin_server";
+package admin_server;
+
+service AdminService {
+  rpc SignUp(SignUpReq) returns (SignUpRsp) {}
+}
+
+message SignUpReq {
+  string username = 1;
+  string password = 2;
+}
+
+message SignUpRsp {
+}
